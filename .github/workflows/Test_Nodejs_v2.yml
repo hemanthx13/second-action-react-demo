@@ -1,4 +1,4 @@
-name: Test Project
+name: Test_Nodejs_v2
 on: workflow_dispatch
 jobs:
   test:
@@ -8,25 +8,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: hemanthx13/second-action-react-demo
-          path: master
       - name: Folder-Structure
         run: |
           ls -al
-          echo 'master info'
-          ls -al ./master
-          echo 'work dir'
-          pwd
-          echo 'change to master'
-          cd master
           echo 'work dir'
           pwd                    
 
-      - name: install nodejs
+      - name: Install Nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install Dependencies
         run: |
-          cd master
           npm ci
           npm test
