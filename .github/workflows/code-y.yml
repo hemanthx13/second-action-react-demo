@@ -20,6 +20,5 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: |
-          cd master
           npm ci
           npm test
