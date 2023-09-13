@@ -30,5 +30,3 @@ jobs:
           cd master
           npm ci
           npm test
-      - name: Run Tests
-        run: npm test ./master
