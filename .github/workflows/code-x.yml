@@ -27,8 +27,8 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: |
-          pwd
-          npm install ./master
+          cd master
+          npm install
       - name: Run Tests
         run: npm test ./master
 
