@@ -10,7 +10,7 @@ jobs:
           repository: hemanthx13/second-action-react-demo
           path: master
       - name: my-name
-        run: echo "Hemanth KOKO Zuzu"
+        run: ls -l
       - name: install nodejs
         uses: actions/setup-node@v3
         with:
