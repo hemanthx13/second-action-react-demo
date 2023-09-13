@@ -12,8 +12,11 @@ jobs:
       - name: my-name
         run: 
           ls -al
+          echo 'master info'
           ls -al ./master
+          echo 'get into master info'
           cd master
+          echo 'get all master info'
           ls -al
 
       - name: install nodejs
