@@ -9,4 +9,15 @@ jobs:
         with:
           repository: hemanthx13/second-action-react-demo
           path: master
+      - name: my-name
+        run: echo "Hemanth KOKO Zuzu"
+      - name: install nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Tests
+        run: npm test
+
 
