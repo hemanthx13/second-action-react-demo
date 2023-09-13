@@ -14,17 +14,19 @@ jobs:
           ls -al
           echo 'master info'
           ls -al ./master
-          echo 'get into master info'
+          echo 'work dir'
+          pwd
+          echo 'change to master'
           cd master
-          echo 'get all master info'
-          ls -al
+          echo 'work dir'
+          pwd                    
 
       - name: install nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install Dependencies
-        run: npm install
+        run: npm install ./master
       - name: Run Tests
         run: npm test
 
