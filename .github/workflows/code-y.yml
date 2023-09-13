@@ -11,12 +11,6 @@ jobs:
       - name: Folder-Structure
         run: |
           ls -al
-          echo 'master info'
-          ls -al ./master
-          echo 'work dir'
-          pwd
-          echo 'change to master'
-          cd master
           echo 'work dir'
           pwd                    
 
