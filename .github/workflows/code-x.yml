@@ -7,5 +7,6 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v4
         with:
-          repository: master
+          repository: hemanthx13/second-action-react-demo
+          path: master
 
