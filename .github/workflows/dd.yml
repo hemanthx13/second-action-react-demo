@@ -2,12 +2,13 @@ name: Hello World
 
 on:
   push:
-    branches: [ test33 ]
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       name:
         description: 'Who are you you saying hello to?'
         required: false
+        default: 'World'
 
 jobs:
   greet:
