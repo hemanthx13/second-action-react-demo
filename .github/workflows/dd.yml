@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Who are you saying hello to?'
+        description: 'Who are you you saying hello to?'
         required: false
         default: 'World'
 
