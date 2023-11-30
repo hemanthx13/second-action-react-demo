@@ -1,5 +1,5 @@
 name: deploy_Nodejs_v1
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
