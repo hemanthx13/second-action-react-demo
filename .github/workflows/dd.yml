@@ -8,7 +8,6 @@ on:
       name:
         description: 'Who are you you saying hello to?'
         required: false
-        default: 'World'
 
 jobs:
   greet:
