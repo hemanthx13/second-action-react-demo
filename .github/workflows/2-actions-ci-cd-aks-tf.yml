@@ -102,6 +102,15 @@ jobs:
       run: terraform fmt -check
       continue-on-error: true
 
+    - name: Login to Azure
+      uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }} # Set a secret containing your Azure credentials
+
+    - name: Terraform Plans
+      run: terraform plan -out=plan.out
+
+
     - name: Terraform Plan
       id: plan
       env:
