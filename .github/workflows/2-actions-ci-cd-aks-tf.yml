@@ -2,7 +2,7 @@ name: 2-actions-ci-cd-aks-tf
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths: .github/workflows/2-actions-ci-cd-aks-tf.yml
   pull_request:
     branches:  none # [ main ]
