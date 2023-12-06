@@ -1,5 +1,5 @@
 # Use az ad sp to generate a Service Principal in Azure
-az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/YOUR_ARM_SUBSCRIPTION_ID"
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/YOUR_AZURE_SUBSCRIPTION_ID"
 # Output is like:
 # Retrying role assignment creation: 1/36
 # {

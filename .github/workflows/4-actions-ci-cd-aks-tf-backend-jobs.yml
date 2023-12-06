@@ -2,7 +2,7 @@ name: 4-actions-ci-cd-aks-tf-backend-jobs
 
 on:
   push:
-    branches: none # [ master ] / [ main ]
+    branches: [ main ]
     paths: .github/workflows/4-actions-ci-cd-aks-tf-backend-jobs.yml
   pull_request:
     branches:  none # [ main ]
@@ -23,8 +23,8 @@ env:
   
   ARM_CLIENT_ID: ${{ secrets.AZURE_SP_CLIENT_ID }}
   ARM_CLIENT_SECRET: ${{ secrets.AZURE_SP_CLIENT_SECRET }}
-  ARM_SUBSCRIPTION_ID:  ${{ secrets.ARM_SUBSCRIPTION_ID }}
-  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID:  ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
   AKS_RESOURCE_GROUP: aks-102-rg
   AKS_NAME: aks-102

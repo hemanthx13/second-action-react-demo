@@ -2,7 +2,7 @@ name: 3-actions-ci-cd-aks-tf-backend
 
 on:
   push:
-    branches: none # [ master ] / [ main ]
+    branches: none # [ main ]
   pull_request:
     branches:  none # [ release ]
   # Allows you to run this workflow manually from the Actions tab
@@ -23,8 +23,8 @@ env:
   
   ARM_CLIENT_ID: ${{ secrets.AZURE_SP_CLIENT_ID }}
   ARM_CLIENT_SECRET: ${{ secrets.AZURE_SP_CLIENT_SECRET }}
-  ARM_SUBSCRIPTION_ID:  ${{ secrets.ARM_SUBSCRIPTION_ID }}
-  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID:  ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
   AKS_RESOURCE_GROUP: aks-102-rg
   AKS_NAME: aks-102
@@ -82,7 +82,7 @@ jobs:
       with:
         azcliversion: 2.27.2
         inlineScript: |
-          az login --service-principal -u ${{ secrets.AZURE_SP_CLIENT_ID }} -p ${{ secrets.AZURE_SP_CLIENT_SECRET }} --tenant ${{ secrets.ARM_TENANT_ID }}
+          az login --service-principal -u ${{ secrets.AZURE_SP_CLIENT_ID }} -p ${{ secrets.AZURE_SP_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
     
     - name: Replace Variables in terraform.tfvars
       uses: datamonsters/replace-action@v2
@@ -177,7 +177,7 @@ jobs:
 #        
 #    - name: Push Image to Docker Hub
 #      run: |
-#        # az login --service-principal -u ${{ secrets.AZURE_SP_CLIENT_ID }} -p ${{ secrets.AZURE_SP_CLIENT_SECRET }} --tenant ${{ secrets.ARM_TENANT_ID }}
+#        # az login --service-principal -u ${{ secrets.AZURE_SP_CLIENT_ID }} -p ${{ secrets.AZURE_SP_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
 #        # az acr login -n $DOCKER_REPOSITORY --expose-token
 #        # docker login $DOCKER_REPOSITORY -u $ACR_NAME -p '1FYGAsIENf2+24J9rHNjYMrBJ3EB0OB6'
 #        docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
