@@ -2,7 +2,7 @@ name: 3-actions-ci-cd-aks-tf-backend
 
 on:
   push:
-    branches: none # [ main ]
+    branches: none # [ master ] / [ main ]
   pull_request:
     branches:  none # [ release ]
   # Allows you to run this workflow manually from the Actions tab

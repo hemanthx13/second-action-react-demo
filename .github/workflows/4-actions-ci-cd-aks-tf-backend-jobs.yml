@@ -2,7 +2,7 @@ name: 4-actions-ci-cd-aks-tf-backend-jobs
 
 on:
   push:
-    branches: [ master ]
+    branches: none # [ master ] / [ main ]
     paths: .github/workflows/4-actions-ci-cd-aks-tf-backend-jobs.yml
   pull_request:
     branches:  none # [ main ]
